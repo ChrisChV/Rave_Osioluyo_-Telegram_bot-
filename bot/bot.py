@@ -33,7 +33,7 @@ def send_message(prepared_data):
 @post('/')  # our python function based endpoint
 def main():  
     data = bottle_request.json  # <--- extract all request data
-    send_message(prepare_data_for_answer(data));
+    send_message(prepare_data_for_answer(data))
     print(data)
 
     return 
