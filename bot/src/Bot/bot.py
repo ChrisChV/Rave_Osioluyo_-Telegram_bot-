@@ -19,3 +19,4 @@ if __name__ == "__main__":
 	updater.bot.deleteWebhook()
 	updater.start_polling()
 	updater.idle()
+
