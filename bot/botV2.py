@@ -8,26 +8,33 @@ import logging
 import os
 
 def start(bot, update):
-    bot.send_message(chat_id=update.message.chat_id, text="I'm a bot, please talk to me!")
+    update.effective_message.reply_text("I'm a bot, please talk to me!")
 
 def echo(bot, update):
-    bot.send_message(chat_id=update.message.chat_id, text=update.message.text)
+    update.effective_message.reply_text(update.effective_message.text)
 
 def caps(bot, update, args):
     text_caps = ' '.join(args).upper()
-    bot.send_message(chat_id=update.message.chat_id, text=text_caps)
+    update.effective_message.reply_text(text_caps)
 
-def initServer():
+def error(bot, update, error):
+    logger.warning('Update "%s" caused error "%s"', update, error)
 
-    TOKEN = '717635382:AAE9Qy-9Vd0wAsUAVnII9y9CLE-8E-s9EAA'
-    NAME = 'rave-osioluyo'
+
+if __name__ == "__main__":
+
+    TOKEN = "717635382:AAE9Qy-9Vd0wAsUAVnII9y9CLE-8E-s9EAA"
+    NAME = "rave-osioluyo"
 
     PORT = os.environ.get('PORT')
 
-    updater = Updater(token=TOKEN)
-    dispatcher = updater.dispatcher
+    
     logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                         level=logging.INFO)
+    logger = logging.getLogger(__name__)
+
+    updater = Updater(TOKEN)
+    dispatcher = updater.dispatcher
 
     start_handler = CommandHandler('start', start)
     dispatcher.add_handler(start_handler)
@@ -35,9 +42,6 @@ def initServer():
     dispatcher.add_handler(echo_handler)
     caps_handler = CommandHandler('caps', caps, pass_args=True)
     dispatcher.add_handler(caps_handler)
-
-
-    updater.start_polling()
 
     updater.start_webhook(listen="0.0.0.0",
                           port=int(PORT),
