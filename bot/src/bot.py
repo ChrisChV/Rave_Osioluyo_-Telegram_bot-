@@ -22,7 +22,6 @@ def prepare_data_for_answer(data):
         "chat_id": get_chat_id(data),
         "text": answer,
     }
-    print(json_data)
 
     return json_data
 
@@ -33,8 +32,9 @@ def send_message(prepared_data):
 @post('/')  # our python function based endpoint
 def main():  
     data = bottle_request.json  # <--- extract all request data
-    send_message(prepare_data_for_answer(data))
     print(data)
+    send_message(prepare_data_for_answer(data))
+    
 
     return 
 
