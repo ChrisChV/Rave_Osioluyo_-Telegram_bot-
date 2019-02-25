@@ -8,12 +8,15 @@ def sendPostToWebHook(WEB_HOOK_URL):
     jsonStructureFile = open(JSON_STRUCTURE_FILE_NAME, 'r')
     data = json.load(jsonStructureFile)
 
-    data["message"]["text"] = "super test"
+    data["message"]["text"] = "/caps test"
+    #data["message"]["id"] = 123456
+    #data["message"]["chat"]["id"] = 123456
     jsonData = json.dumps(data)
+
 
     res = requests.post(WEB_HOOK_URL, json = data)
 
 
 
     
-sendPostToWebHook("https://890e6e98.ngrok.io")
+sendPostToWebHook("https://rave-osioluyp-test.herokuapp.com/717635382:AAE9Qy-9Vd0wAsUAVnII9y9CLE-8E-s9EAA")
