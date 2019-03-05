@@ -16,3 +16,6 @@ def sendMsg(message):
     #data["message"]["chat"]["id"] = 123456
     jsonData = json.dumps(data)
     res = requests.post(sad.WEB_HOOK_URL, json = data)
+
+
+sendMsg("HOla")

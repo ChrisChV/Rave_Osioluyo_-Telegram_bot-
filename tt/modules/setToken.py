@@ -13,7 +13,7 @@ def _setToken(message):
     DATABASE_URL = os.environ['DATABASE_URL']
     conn = psycopg2.connect(DATABASE_URL, sslmode='require')
     cur = conn.cursor()
-    cur.execute("INSERT into tokens  values(%s, %s) ", (token[0], tokens[0]))
+    cur.execute("INSERT into tokens(chat_id, token)  values(%s, %s) ", (token[0], tokens[0]))
     conn.commit()
     cur.close()
     conn.close()

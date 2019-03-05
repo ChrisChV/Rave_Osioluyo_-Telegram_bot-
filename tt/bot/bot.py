@@ -7,12 +7,11 @@ import sys
 import ravegen.Decorators.functionManager as functionManager 
 sys.path.insert(0, 'modules')
 from create import *
-from echo import *
 from error import *
+from getToken import *
 from sendMsg import *
 from setToken import *
 from start import *
-from test import *
 
 if __name__ == "__main__":
 	TOKEN = "717635382:AAE9Qy-9Vd0wAsUAVnII9y9CLE-8E-s9EAA"

@@ -4,6 +4,8 @@ import json
 import requests
 
 def init():
+    command = "mkdir -p " + sad.INSTALL_PATH
+    os.system(command)
     token = raw_input("Write the token here: ")
     setToken(token)
     tokenFile = open(sad.TOKEN_FILE, 'w')
