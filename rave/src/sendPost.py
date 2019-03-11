@@ -5,7 +5,7 @@ from sad import *
 
 
 def sendPostToWebHook(WEB_HOOK_URL):
-    jsonStructureFile = open(JSON_STRUCTURE_FILE_NAME, 'r')
+    jsonStructureFile = open(JSON_STRUCTURE_FILE_PATH, 'r')
     data = json.load(jsonStructureFile)
 
     data["message"]["text"] = "/caps test"
@@ -19,4 +19,4 @@ def sendPostToWebHook(WEB_HOOK_URL):
 
 
     
-sendPostToWebHook("https://rave-osioluyp-test.herokuapp.com/717635382:AAE9Qy-9Vd0wAsUAVnII9y9CLE-8E-s9EAA")
+#sendPostToWebHook("https://rave-osioluyp-test.herokuapp.com/717635382:AAE9Qy-9Vd0wAsUAVnII9y9CLE-8E-s9EAA")

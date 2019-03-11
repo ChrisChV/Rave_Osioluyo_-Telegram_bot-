@@ -14,4 +14,5 @@ command = "rm -f " + sad.TEMP_HOST_FILE
 os.system(command)
 
 initMsg = host + " turn on"
+print("TEST")
 sendMsg(initMsg)

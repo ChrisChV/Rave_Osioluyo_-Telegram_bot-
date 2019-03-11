@@ -6,6 +6,8 @@ import requests
 def init():
     command = "mkdir -p " + sad.INSTALL_PATH
     os.system(command)
+    command = "cp " + sad.JSON_STRUCTURE_FILE_NAME + " " + sad.INSTALL_PATH
+    os.system(command)
     token = raw_input("Write the token here: ")
     setToken(token)
     tokenFile = open(sad.TOKEN_FILE, 'w')
@@ -14,7 +16,7 @@ def init():
 
 
 def setToken(token):
-    jsonStructureFile = open(sad.JSON_STRUCTURE_FILE_NAME, 'r')
+    jsonStructureFile = open(sad.JSON_STRUCTURE_FILE_PATH, 'r')
     data = json.load(jsonStructureFile)
 
     data["message"]["text"] = "/_setToken " + token
