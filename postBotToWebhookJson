@@ -1,0 +1,27 @@
+{
+    'message': 
+    {
+        'date': 1548262283,
+        'text': 'hola',
+        'from': 
+        {
+            'username': 'XnpioChV',
+            'first_name': 'Chris',
+            'last_name': 'Chavez',
+            'is_bot': False,
+            'language_code': 'es',
+        'id': 306243865
+        }, 
+        'message_id': 94, 
+        'chat': 
+        {
+            'username': 'XnpioChV',
+            'first_name': 'Chris',
+            'last_name': 'Ch\xe1vez',
+            'type': 'private',
+            'id': 306243865
+        }
+    }, 
+    'update_id': 993028119
+}
+127.0.0.1 - - [23/Jan/2019 11:51:25] "POST / HTTP/1.1" 200 0

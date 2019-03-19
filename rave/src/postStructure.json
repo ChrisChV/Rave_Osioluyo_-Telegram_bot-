@@ -1,0 +1,26 @@
+{
+    "message": 
+    {
+        "date": 1548262283,
+        "text": "text",
+        "from": 
+        {
+            "username": "username",
+            "first_name": "first_name",
+            "last_name": "last_name",
+            "is_bot": 0,
+            "language_code": "es",
+        "id": 306243865
+        }, 
+        "message_id": 94, 
+        "chat": 
+        {
+            "username": "username",
+            "first_name": "first_name",
+            "last_name": "last_name",
+            "type": "private",
+            "id": 306243865
+        }
+    }, 
+    "update_id" : 993028119
+}
