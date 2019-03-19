@@ -1,4 +1,0 @@
-https://api.telegram.org/bot717635382:AAE9Qy-9Vd0wAsUAVnII9y9CLE-8E-s9EAA/getUpdates
-
-{"ok":true,"result":[{"update_id":993028069,
-"message":{"message_id":2,"from":{"id":306243865,"is_bot":false,"first_name":"Chris","last_name":"Ch\u00e1vez","username":"XnpioChV","language_code":"es"},"chat":{"id":306243865,"first_name":"Chris","last_name":"Ch\u00e1vez","username":"XnpioChV","type":"private"},"date":1547174267,"text":"25888"}}]}
